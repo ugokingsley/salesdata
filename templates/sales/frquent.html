@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block content %}
+
+
+{% include 'nav.html' %}
+<br><br>
+<div class="container">
+    <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">S/N</th>
+      <th scope="col">Invoice No</th>
+      <th scope="col">Stock Code</th>
+      <th scope="col">Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Invoice Date</th>
+        <th scope="col">Price</th>
+         <th scope="col">Customer ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for obj in users %}
+    <tr>
+      <td>{{ obj.pk }}</td>
+      <td>{{ obj.invoice }}</td>
+      <td>{{ obj.stockcode }}</td>
+      <td>{{ obj.description }}</td>
+      <td>{{ obj.quantity }}</td>
+      <td>{{ obj.invoicedate }}</td>
+      <td>{{ obj.price }}</td>
+      <td>{{ obj.customerid }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+{% endblock  %}
