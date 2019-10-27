@@ -17,3 +17,4 @@ boto3==1.5.32
 botocore==1.8.46
 psycopg2==2.7.3.2
 gunicorn==19.6.0
+whitenoise==3.2
