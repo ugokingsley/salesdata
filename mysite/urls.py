@@ -20,5 +20,7 @@ from sales.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('frequent-sales/', frequentsales, name='frequentsales'),
+    path('most-frequent-item/', mostfrequentitem, name='mostfrequentitem'),
 
 ]

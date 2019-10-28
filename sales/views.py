@@ -5,12 +5,20 @@ from .models import *
 from django.db.models import Count
 
 
+def mostfrequentitem(request):
+    list1 = SalesData.objects.values('description').annotate(c=Count('description')).order_by('-c')[:1]
+    context = {
+        "list1": list1,
+    }
+    return render(request, 'sales/most-frequent-item.html', context)
+
+
 def frequentsales(request):
     list1 = SalesData.objects.values('description').annotate(c=Count('description')).order_by('-c')
     context = {
         "list1": list1,
     }
-    return render(request, 'sales/frequent.html', context)
+    return render(request, 'sales/frequent-sales.html', context)
 
 
 def index(request):

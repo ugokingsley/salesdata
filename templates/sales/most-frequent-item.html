@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block content %}
+
+
+{% include 'nav.html' %}
+<br><br>
+<div class="container">
+    <table class="table table-sm">
+  <thead>
+    <tr>
+
+      <th scope="col">Description</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for obj in list1 %}
+    <tr>
+
+      <td>{{ obj.description }}</td>
+
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+{% endblock  %}
