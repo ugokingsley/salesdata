@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+import import_export
 
 
 class SalesData(models.Model):
