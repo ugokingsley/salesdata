@@ -1,6 +1,6 @@
 defusedxml==0.6.0
 diff-match-patch==20181111
-Django==2.2
+Django==3.0
 django-import-export==1.2.0
 et-xmlfile==1.0.1
 jdcal==1.4.1
@@ -18,3 +18,5 @@ botocore==1.8.46
 psycopg2==2.7.3.2
 gunicorn==19.6.0
 whitenoise==3.2
+djangorestframework==3.11.0
+markdown==3.2.1

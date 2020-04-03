@@ -22,5 +22,6 @@ urlpatterns = [
     path('', index, name='index'),
     path('frequent-sales/', frequentsales, name='frequentsales'),
     path('most-frequent-item/', mostfrequentitem, name='mostfrequentitem'),
+    path('api/', include('api.urls')),
 
 ]
