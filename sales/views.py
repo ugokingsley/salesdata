@@ -2,7 +2,22 @@ from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from .models import *
+from .forms import *
 from django.db.models import Count
+from django.views.generic.edit import CreateView 
+from django.urls import reverse_lazy
+
+
+
+class SalesDataCreate(CreateView): 
+    # specify the model for create view 
+    model = SalesData 
+    form_class = SalesDataForm
+    success_url = reverse_lazy('index')
+    template_name = 'sales/sales_create.html'
+
+
+
 
 
 def mostfrequentitem(request):

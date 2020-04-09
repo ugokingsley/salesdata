@@ -22,6 +22,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('frequent-sales/', frequentsales, name='frequentsales'),
     path('most-frequent-item/', mostfrequentitem, name='mostfrequentitem'),
+    path('salescreate/', SalesDataCreate.as_view(), name='salescreate'), 
     path('api/', include('api.urls')),
 
 ]
